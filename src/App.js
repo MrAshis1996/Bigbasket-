@@ -6,7 +6,7 @@ function App() {
     <div className="App" >
       <header className="App-header" style={{ background: "red" }}>
         <h1>
-          Welcome to India</h1>
+          Welcome to Ashis Malik</h1>
 
       </header>
     </div>
