@@ -1,15 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { Box } from "@mui/material";
+// Components
+import Header from "./components/header/Header";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="App" >
-      <header className="App-header" style={{ background: "red" }}>
-        <h1>
-          Welcome to Bhubaneswar</h1>
-
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
