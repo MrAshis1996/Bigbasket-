@@ -11,8 +11,8 @@ const Header = () => {
             }}>
                 <div className='container' style={{width:"80%"}}>
                     <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
-                        <h1>hello</h1>
-                        <h1>ashis</h1>
+                        <h1>Navbar</h1>
+                        <h1>bhabesh</h1>
                     </div>
                 </div>
 

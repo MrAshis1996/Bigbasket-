@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Navbar Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: -50px;
+      transition: top 0.3s;
+      z-index: 1000;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    #content {
+      padding: 70px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="content">
+    <!-- Your page content goes here -->
+    <h1>Welcome to My Website</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    <!-- Add more content as needed -->
+  </div>
+  <script>
+    let prevScrollPos = window.pageYOffset;
+  
+    window.onscroll = function() {
+      const currentScrollPos = window.pageYOffset;
+  
+      if (prevScrollPos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+  
+      prevScrollPos = currentScrollPos; // Add the missing semicolon here
+    };
+  </script>
+  
